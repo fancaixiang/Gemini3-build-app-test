@@ -1,4 +1,4 @@
-import { Project, Member, KanbanColumnData } from './types';
+import { Project, Member, KanbanColumn } from './types';
 
 export const SIDEBAR_PROJECTS: Project[] = [
   { id: '1', name: 'BizConnect', count: 7 },
@@ -14,7 +14,7 @@ export const MEMBERS: Member[] = [
   { id: '4', name: 'Cara Carr', role: 'SEO Specialist', avatar: 'https://picsum.photos/seed/cara/64/64', status: 'online' },
 ];
 
-export const KANBAN_DATA: KanbanColumnData[] = [
+export const KANBAN_DATA: KanbanColumn[] = [
   {
     id: 'contacted',
     title: 'Contacted',

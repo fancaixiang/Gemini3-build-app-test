@@ -1,3 +1,28 @@
+export interface Manager {
+  name: string;
+  avatar: string;
+}
+
+export interface KanbanCardData {
+  id: string;
+  companyName: string;
+  description: string;
+  date: string;
+  comments: number;
+  attachments: number;
+  variant?: 'dark';
+  location?: string;
+  email?: string;
+  manager?: Manager;
+}
+
+export interface KanbanColumn {
+  id: string;
+  title: string;
+  count: number;
+  cards: KanbanCardData[];
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -10,27 +35,4 @@ export interface Member {
   role: string;
   avatar: string;
   status: 'online' | 'offline';
-}
-
-export interface KanbanCardData {
-  id: string;
-  companyName: string;
-  description: string;
-  date: string;
-  comments: number;
-  attachments: number;
-  variant?: 'default' | 'dark';
-  location?: string;
-  email?: string;
-  manager?: {
-    name: string;
-    avatar: string;
-  };
-}
-
-export interface KanbanColumnData {
-  id: string;
-  title: string;
-  count: number;
-  cards: KanbanCardData[];
 }
